@@ -1,0 +1,37 @@
+# Nikki Huynh
+# 7/16/22
+# Description: Program that performs a test to see if it is possible to form a triangle when given 3 sticks of different lengths.
+
+a = int(input('Enter a length a: '))
+b = int(input('Enter a length b: '))
+c = int(input('Enter a length c: '))
+
+def isTriangle(a,b,c):
+    if c > a + b or b > a + c or a > b + c:
+        return False
+    else:
+        return True
+    
+print('Three sticks with length', a, ',', b, ',', c, ' can form a triangle:',isTriangle(a,b,c))
+
+'''
+>>>
+run #1:
+Enter a length a: 3
+Enter a length b: 4
+Enter a length c: 5
+Three sticks with length 3 , 4 , 5  can form a triangle: True
+
+run #2:
+Enter a length a: 20
+Enter a length b: 3
+Enter a length c: 4
+Three sticks with length 20 , 3 , 4  can form a triangle: False
+
+run #3:
+Enter a length a: 2
+Enter a length b: 1
+Enter a length c: 1
+Three sticks with length 2 , 1 , 1  can form a triangle: True
+>>>
+'''
