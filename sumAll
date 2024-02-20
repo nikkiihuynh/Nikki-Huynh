@@ -1,0 +1,56 @@
+# Nikki Huynh
+# 7/9/22
+# Description: Program that asks the user to enter 4 numbers (+/-) and outputs the sum(all), sum(+),sum(-).
+
+a = int(input("enter number 1:"))
+b = int(input("enter number 2:"))
+c = int(input("enter number 3:"))
+d = int(input("enter number 4:"))
+
+sumAll = 0
+sumAll = a+b+c+d
+print('Sum of all values =', sumAll)
+
+sumNeg = 0
+if a < 0:
+    sumNeg = sumNeg + a # only add it to sumNeg if it is a negative number
+if b< 0:
+    sumNeg += b
+if c < 0:
+    sumNeg += c
+if d < 0:
+    sumNeg += d
+print('Sum of negative numbers =', sumNeg)
+
+sumPos = 0
+if a > 0:
+    sumPos = sumPos + a
+if b > 0:
+    sumPos += b
+if c > 0:
+    sumPos += c
+if d > 0:
+    sumPos += d
+print('Sum of positive numbers =', sumPos)
+
+'''
+>>>
+run #1
+enter number 1:3
+enter number 2:-2
+enter number 3:4
+enter number 4:-5
+Sum of all values = 0
+Sum of negative numbers = -7
+Sum of positive numbers = 7
+
+run #2
+enter number 1:4
+enter number 2:5
+enter number 3:-2
+enter number 4:-1
+Sum of all values = 6
+Sum of negative numbers = -3
+Sum of positive numbers = 9
+>>>
+'''
