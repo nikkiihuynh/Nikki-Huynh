@@ -1,0 +1,74 @@
+# Nikki Huynh
+# 8/2/2022
+# Description: Loop to make 10 random numbers between 20-30, and store them in a variable numList; sort using bubble sort; show sorted and unsorted list; find the sum and average; find the median; and show how many numbers are evenly divisible by 2
+
+import random 
+numList = []
+for i in range(10): # loop to make 10 random numbers between 20-30
+    number = random.randint(20,30)
+    print(number)
+    numList.append(number) # stores values in numList
+
+print('unsorted list:', numList) # displays unsorted list
+
+# bubble sort
+for j in range (0, len(numList)-1, 1):
+    for i in range (0, len(numList)-1, 1):
+        if int(numList[i] > int(numList[i+1])):
+            temp = numList[i]
+            numList[i] = numList[i+1]
+            numList[i+1] = temp
+print('sorted list:', numList) # displays sorted list
+
+# sum and average of the numbers in numList
+def sum(numList):
+    total = 0
+    for i in range(0, len(numList), 1):
+        total += numList[i]
+    return total
+
+def average(numList):
+    average = sum(numList)/ len(numList)
+    return average
+
+def main():
+    print("sum =", sum(numList))
+    print("average =", format(average(numList), ".2f"))
+main()
+
+# find the median of the list
+if len(numList) % 2 == 0:
+    medianIndex2 = int(len(numList) / 2)
+    medianIndex1 = medianIndex2 - 1
+    median = (numList[medianIndex1] + numList[medianIndex2]) / 2
+    print("median =", median)
+
+# show how many numbers are evenly divisible by 2
+divByTwo = []
+for i in range(0, len(numList), 1):
+    if numList[i] % 2 == 0:
+        divByTwo.append(numList[i])
+print("There are", len(divByTwo), "numbers evenly divisible by two.")
+print(divByTwo)
+
+'''
+>>>
+26
+22
+23
+24
+28
+23
+26
+24
+21
+22
+unsorted list: [26, 22, 23, 24, 28, 23, 26, 24, 21, 22]
+sorted list: [21, 22, 22, 23, 23, 24, 24, 26, 26, 28]
+sum = 239
+average = 23.90
+median = 23.5
+There are 7 numbers evenly divisible by two.
+[22, 22, 24, 24, 26, 26, 28]
+>>>
+'''
