@@ -1,0 +1,50 @@
+# Nikki Huynh
+# 7/10/22
+# Description: Program that calculates exactly how much more (or less) you can make with the penny on day 30.
+
+penny = 0.01
+difference = 0
+print('day     penny         difference(choice 2 - choice 1)')
+for day in range(1,31,1):
+    
+    print("%2i" %day, "    {:12,.2f}".format(penny), "    {:12,.2f}".format(1000000-penny) )
+    penny = penny*2 # penny = penny + penny
+print("The difference column outputs the loss/gain of choosing $1 million over the penny option for the 30 days.")
+
+
+'''
+>>>
+day     penny         difference(choice 2 - choice 1)
+ 1             0.01       999,999.99
+ 2             0.02       999,999.98
+ 3             0.04       999,999.96
+ 4             0.08       999,999.92
+ 5             0.16       999,999.84
+ 6             0.32       999,999.68
+ 7             0.64       999,999.36
+ 8             1.28       999,998.72
+ 9             2.56       999,997.44
+10             5.12       999,994.88
+11            10.24       999,989.76
+12            20.48       999,979.52
+13            40.96       999,959.04
+14            81.92       999,918.08
+15           163.84       999,836.16
+16           327.68       999,672.32
+17           655.36       999,344.64
+18         1,310.72       998,689.28
+19         2,621.44       997,378.56
+20         5,242.88       994,757.12
+21        10,485.76       989,514.24
+22        20,971.52       979,028.48
+23        41,943.04       958,056.96
+24        83,886.08       916,113.92
+25       167,772.16       832,227.84
+26       335,544.32       664,455.68
+27       671,088.64       328,911.36
+28     1,342,177.28      -342,177.28
+29     2,684,354.56     -1,684,354.56
+30     5,368,709.12     -4,368,709.12
+The difference column outputs the loss/gain of choosing $1 million over the penny option for the 30 days.
+>>>
+'''
