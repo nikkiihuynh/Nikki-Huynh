@@ -1,0 +1,59 @@
+# Nikki Huynh
+# 7/10/22
+# Description: Updated rogram that reads in X whole numbers and outputs (1) the sum of all positive numbers, (2) the sum of all negative numbers, and (3) the sum of all positive and negative numbers. The user can enter the X numbers in any different order every time, and can repeat the program if desired.
+
+while True: #repeats the program
+    X = int(input("How many numbers would you like to enter? "))
+    
+    sumPos = 0
+    sumNeg = 0
+    sumAll = 0
+
+    for index in range(0, X, 1):
+        number = float(int(input("Enter number %i :" %(index+1))))
+    
+        #add only positive numbers to sumPos
+        if number > 0:
+            sumPos += number
+        
+        #add only negative numbers to sumNeg
+        if number < 0:
+            sumNeg += number
+        
+        #add every number to sumAll
+        sumAll += number
+
+    print("Sum of only positive numbers =", sumPos)
+    print("Sum of only negative numbers =", sumNeg)
+    print("Sum of all numbers =", sumAll)
+
+    #to repeat the program
+    repeat = input("Do you want to repeat the program? y/n:")
+    if repeat != 'y' and repeat == 'n':
+        break
+
+'''
+>>>
+How many numbers would you like to enter?5
+Enter number 1 :2
+Enter number 2 :3
+Enter number 3 :4
+Enter number 4 :4
+Enter number 5 :6
+Sum of only positive numbers = 19.0
+Sum of only negative numbers = 0
+Sum of all numbers = 19.0
+Do you want to repeat the program? y/n:y
+How many numbers would you like to enter?4
+Enter number 1 :-1
+Enter number 2 :2
+Enter number 3 :-3
+Enter number 4 :4
+Sum of only positive numbers = 6.0
+Sum of only negative numbers = -4.0
+Sum of all numbers = 2.0
+Do you want to repeat the program? y/n:n
+>>>
+'''
+
+
