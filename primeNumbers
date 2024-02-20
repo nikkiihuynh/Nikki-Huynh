@@ -11,7 +11,6 @@ for N in range ( 3, 101, 1):
 
 '''
 >>>
-=========== RESTART: C:/Users/nikki/Downloads/intro to python/p45.py ===========
 3 is a prime number
 5 is a prime number
 7 is a prime number
