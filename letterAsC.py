@@ -1,8 +1,6 @@
-# p4.py
 # Nikki Huynh
 # 6/30/22
-# Python 3.8.1
-# Description: Program to take character input from keyboard and outputs a large block letter "C"  composed of that character
+# Description: Program to take character input from keyboard and outputs a large block letter "C"  composed of selected input.
 
 x = input("Enter a letter: ")
 
