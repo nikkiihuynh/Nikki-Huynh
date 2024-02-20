@@ -21,14 +21,12 @@ else:
 
 '''
 >>>
-============ RESTART: C:/Users/nikki/Downloads/intro to python/p6.py ===========
 Enter your height
 feet:5
 inches:5
 5 feet 5 inch(es) = 65 inches
 
 #sample run with negative height input
-============ RESTART: C:/Users/nikki/Downloads/intro to python/p6.py ===========
 Enter your height
 feet:5
 inches:-4
