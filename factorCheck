@@ -1,0 +1,30 @@
+# Nikki Huynh
+# 7/16/22
+# Description: Function with two parameters N and M. The function returns true if N is evenly divisible by M and false otherwise.
+
+N = int(input('Enter integer N: '))
+M = int(input('Enter integer M: '))
+def isDivisible(N, M):
+    if N % M == 0:
+        return True
+    if N % M != 0:
+        return False
+
+if(isDivisible(N,M) == True):
+    print(N, 'is evenly divisible by', M, ':', isDivisible(N,M))
+else:
+    print(N, 'is evenly divisible by', M, ':', isDivisible(N,M))
+
+'''
+>>>
+run #1:
+Enter integer N: 12
+Enter integer M: 2
+12 is evenly divisible by 2 : True
+
+run #2:
+Enter integer N: 23
+Enter integer M: 5
+23 is evenly divisible by 5 : False
+>>>
+'''
