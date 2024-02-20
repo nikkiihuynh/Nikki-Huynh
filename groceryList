@@ -1,0 +1,111 @@
+# Nikki Huynh
+# 8/1/22
+# Description: Create a class item with instance variables: itemName, itemCost; class variable: numberItems' default constructor to set itemName and itemCost
+
+class Item:
+    numberItems = 0 # a class variable, is shared by all object
+
+    # constructor, gets called every time a new item is created
+    def __init__(items, newName = "apple", newCost = 2.49):
+        # instance variables: name, cost
+        # each object has its own set of instance variables
+        items.itemName = newName # change appies only to one particular item instance
+        items.itemCost = newCost # change applies only to one particular item instance
+
+        # class variable: numberItems
+        Item.numberItems += 1 # change applies to all items
+       
+    # method to show the instance variables
+    def show(items):
+        print('item = ', items.itemName, ', cost = ', items.itemCost)
+    # methods to set/change the instance variables:
+    def setName(items, newName):
+        items.itemName = newName
+    def setCost(items, newCost):
+        items.itemCost = newCost
+    # methods to get the instance variables:
+    def getName(items):
+        return items.itemName
+    def getCost(items):
+        return items.itemCost
+
+# create an "object" aItem, which is an "instance" of the class Item
+aItem = Item() # Item() calls the constructor, creates item = "apple" cost = 2.49
+
+# call the method show(), which shows the "instance variables": name, cost
+aItem.show() # item = apple, cost = 2.49
+
+# show the "class variable": numberItems
+print('number of items =', Item.numberItems) # number of items = 1
+
+# create an "object" anotherItem, which is an "instance" of this class Item
+anotherItem = Item(input("What is the item name?: "), float(input("What is the item cost?: "))) # call the constructor
+
+# call the method show(), which shows the "instance variables": name, cost
+anotherItem.show()
+
+# show the "class variable": numberItems
+print('number of items = ', Item.numberItems)
+
+moreItems = Item(input("What is the item name?: "), float(input("What is the item cost?: "))) # call the constructor
+
+moreItems.show()
+
+print('number of items = ', Item.numberItems)
+
+while True:
+    X = input("Would you like to add more items to the list? Y/N: ")
+    if X != 'Y' and X == 'N':
+        break
+    else:
+        addItems = Item(input("What is the item name?: "), float(input("What is the item cost?: ")))
+        # show the "class variable": numberItems
+        print('number of items = ', Item.numberItems)
+        
+groceryBag = [] # make an empty list
+
+print('Total number of items = ', Item.numberItems)
+# add items to the list
+groceryBag.append(aItem) # add an object to the list
+groceryBag.append(anotherItem) # add another object to the list
+groceryBag.append(moreItems)
+groceryBag.append(addItems)
+
+
+# show all the items in the list
+for i in range (0, len(groceryBag), 1):
+    groceryBag[i].show() # shows all of the above
+
+
+# add the cost of all items:
+totalCost = 0
+for i in range(0, len(groceryBag), 1):
+    totalCost += groceryBag[i].getCost()
+print('totalCost =', format(totalCost, ".2f"))
+
+'''
+>>>
+
+item =  apple , cost =  2.49
+number of items = 1
+What is the item name?: milk
+What is the item cost?: 3.50
+item =  milk , cost =  3.5
+number of items =  2
+What is the item name?: eggs
+What is the item cost?: 2.19
+item =  eggs , cost =  2.19
+number of items =  3
+Would you like to add more items to the list? Y/N: Y
+What is the item name?: bananas
+What is the item cost?: 1.65
+number of items =  4
+Would you like to add more items to the list? Y/N: N
+Total number of items =  4
+item =  apple , cost =  2.49
+item =  milk , cost =  3.5
+item =  eggs , cost =  2.19
+item =  bananas , cost =  1.65
+totalCost = 9.83
+>>>
+'''
