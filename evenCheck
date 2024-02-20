@@ -1,0 +1,27 @@
+# Nikki Huynh
+# 7/16/22
+# Description: Function that has an integer N as a parameter and returns true if N is even.
+
+N = int(input('Enter an integer N: '))
+def isEven(N):
+    if N % 2 == 0:
+        return True
+    if N % 2 != 0:
+        return False
+    
+if(isEven(N) == True):
+    print(N, 'is even:', isEven(N))
+else:
+    print(N, 'is even:', isEven(N))
+
+'''
+>>>
+run #1:
+Enter an integer N: 12
+12 is even: True
+
+run #2:
+Enter an integer N: 25
+25 is even: False
+>>>
+'''
