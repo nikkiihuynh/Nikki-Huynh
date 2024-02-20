@@ -1,0 +1,32 @@
+# Nikki Huynh
+# 7/15/22
+# Description: Program that generates a random list of letters.
+
+from random import randint
+
+X = randint(50,75)
+empty_list = [ ]
+countB = 0
+for i in range(0,X,1):
+    asciiNum = randint(65,70)
+    empty_list.append(chr(asciiNum))
+    if asciiNum == 66: # if asciiNum is 'B'
+        countB += 1
+
+print ('The list consists of', X, 'letters')
+print (empty_list)
+print ('the letter "B" appears', countB, 'times')
+
+'''
+>>>
+run #1:
+The list consists of 56 letters
+['E', 'A', 'F', 'A', 'C', 'B', 'E', 'C', 'C', 'F', 'A', 'F', 'E', 'E', 'C', 'A', 'C', 'C', 'C', 'F', 'C', 'E', 'A', 'D', 'A', 'D', 'D', 'D', 'F', 'A', 'C', 'D', 'C', 'A', 'E', 'B', 'B', 'A', 'A', 'D', 'D', 'F', 'A', 'C', 'A', 'D', 'F', 'B', 'B', 'E', 'F', 'A', 'D', 'D', 'F', 'D']
+the letter "B" appears 5 times
+
+run #2:
+The list consists of 57 letters
+['A', 'F', 'D', 'E', 'C', 'F', 'E', 'C', 'D', 'F', 'C', 'F', 'B', 'B', 'D', 'A', 'D', 'C', 'E', 'B', 'E', 'D', 'C', 'F', 'A', 'B', 'F', 'F', 'B', 'F', 'C', 'A', 'D', 'B', 'B', 'E', 'D', 'C', 'F', 'C', 'E', 'D', 'C', 'E', 'A', 'B', 'C', 'F', 'A', 'D', 'D', 'C', 'B', 'D', 'C', 'C', 'D']
+the letter "B" appears 9 times
+>>>
+'''
