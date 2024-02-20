@@ -1,0 +1,70 @@
+# Nikki Huynh
+# 7/9/22
+# Description: Program to convert any given number of total cents (under 100( into the corerct number of quarters, dimes, nickels, pennies.
+
+totalCents = int(input('enter total cents:'))
+
+# use integer division to get a whole number for quarters:
+quarters = int(totalCents/25)
+
+# if there are any quarters...
+if quarters > 0: # more than zero quarters
+    # show how many quarters they have
+    print ('you have', quarters, 'quarters')
+    # now subtract the quarters from total cents
+    totalCents = totalCents - quarters*25 #totalCents=66-2*25=15
+    # ^ new value for the remaining total cents
+
+dimes = int(totalCents/10) # int(15/10) is 1
+# if there are any dimes...
+if dimes > 0: # more than zero dimes
+    # show how many dimes they have
+    print ('you have', dimes, 'dimes')
+    # now subtract the dimes from total cents
+    totalCents = totalCents - dimes*10 # totalCents=15-1*10=5
+    # ^ new value for the remaining total cents
+
+# now do the same for nickels and pennies
+nickels = int(totalCents/5)
+# if there are any nickels...
+if nickels > 0: # more than zero nickels
+    # show how many nickels they have
+    print ('you have', nickels, 'nickels')
+    # now subtract the nickels from total cents
+    totalCents = totalCents - nickels*5
+
+pennies = int(totalCents/1)
+# if there are any pennies...
+if pennies > 0: #more than zero pennies
+    # show how many pennies they have
+    print('you have', pennies, 'pennies')
+    # now substract the pennies from total cents
+    totalCents = totalCents - pennies*1
+
+'''
+>>>
+
+run #1
+enter total cents:66
+you have 2 quarters
+you have 1 dimes
+you have 1 nickels
+you have 1 pennies
+
+run #2
+enter total cents:16
+you have 1 dimes
+you have 1 nickels
+you have 1 pennies
+
+run #3
+enter total cents:6
+you have 1 nickels
+you have 1 pennies
+
+run #4
+enter total cents:4
+you have 4 pennies
+
+>>>
+'''
