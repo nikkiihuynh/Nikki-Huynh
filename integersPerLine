@@ -22,7 +22,6 @@ if X < 10 or X > 30:
             # \n means show a new line
 '''
 >>>
-=========== RESTART: C:/Users/nikki/Downloads/intro to python/p19.py ===========
 Please input an integer X between 10-30:9
 Error, X must be a value between 10-30
 Please input an integer X between 10-30:12
