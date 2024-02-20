@@ -19,7 +19,6 @@ print("The product of", num1, "and", num2, "is", product)
 
 '''
 >>>
-============ RESTART: C:/Users/nikki/Downloads/intro to python/p5.py ===========
 enter first number:12
 enter second number:5
 12 + 5 = 17
