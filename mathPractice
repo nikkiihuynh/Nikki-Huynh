@@ -1,0 +1,52 @@
+# Nikki Huynh
+# 7/14/22
+# Description: Program that lets a child practice arithmetic skills.
+
+from random import randint
+
+while True:
+    num1 = randint(0,9)
+    num2 = randint(0,9)
+
+    operation = input("Would you like to add(+), subtract(-), or multiply(*): ")
+    #Addition
+    if operation == "+":
+        answer = int(input("What is %i + %i = " %(num1,num2)))
+        #repeat question if user is incorrect
+        while answer != num1+num2:
+            answer = int(input("Incorrect, what is %i + %i = " %(num1,num2)))
+    #Subtraction
+    if operation == "-":
+        answer = int(input("What is %i - %i = " %(num1,num2)))
+        #repeat question if user is incorrect
+        while answer != num1-num2:
+            answer = int(input("Incorrect, what is %i - %i = " %(num1,num2)))
+    #Multiplication
+    if operation == "*":
+        answer = int(input("What is %i * %i = " %(num1,num2)))
+        #repeat question if user is incorrect
+        while answer != num1*num2:
+            answer = int(input("Incorrect, what is %i * %i = " %(num1,num2)))
+    repeat = input("Correct! Would you like to try again? (y/n) ")
+    if repeat != 'y':
+        break
+
+'''
+>>>
+Would you like to add(+), subtract(-), or multiply(*): +
+What is 3 + 8 = 10
+Incorrect, what is 3 + 8 = 11
+Correct! Would you like to try again? (y/n) y
+Would you like to add(+), subtract(-), or multiply(*): -
+What is 5 - 6 = 0
+Incorrect, what is 5 - 6 = 2
+Incorrect, what is 5 - 6 = 4
+Incorrect, what is 5 - 6 = -1
+Correct! Would you like to try again? (y/n) y
+Would you like to add(+), subtract(-), or multiply(*): *
+What is 0 * 4 = 2
+Incorrect, what is 0 * 4 = 4
+Incorrect, what is 0 * 4 = 0
+Correct! Would you like to try again? (y/n) n
+>>>
+'''
