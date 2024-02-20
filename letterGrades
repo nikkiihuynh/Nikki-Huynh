@@ -1,0 +1,30 @@
+# Nikki Huynh
+# 7/1/22
+# Description: Program that asks user for a student's grade (%) and returns their letter grade.
+
+#ask the user to enter grade as percent
+percent = float(input('please enter grade as percent:'))
+
+#validate input
+if percent < 0 or percent > 100:
+    print('error, percent must be between 0 to 100')
+    percent = float(input('enter value between 0 to 100:'))
+
+# show the correct letter grade based on the percent
+if percent >= 90 and percent <= 100:
+    print('the grade is "A" ')
+if percent >= 80 and percent < 90:
+    print('the grade is "B" ') 
+if percent >= 70 and percent < 80:
+    print('the grade is "C" ')
+if percent >= 60 and percent < 70:
+    print('the grade is "D" ')
+if percent < 60:
+    print('the grade is "F" ')
+
+'''
+>>>
+please enter grade as percent:74
+the grade is "C"
+>>>
+'''
