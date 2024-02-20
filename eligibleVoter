@@ -1,0 +1,53 @@
+# Nikki Huynh
+# 7/9/22
+# Description: Program to determine if user can vote based on inputs. 
+
+# ask user for input
+age = int(input('please enter your age:'))
+citizen = input('are you a citizen? (y/n):')
+registered = input('are you registered to vote? (y/n):')
+
+# check if they can vote
+if age >= 18 and citizen == 'y' and registered == 'y':
+    print('congratulations, you can vote!')
+# otherwise,
+else:
+    # tell them why they can't vote
+    if age < 18: # age is less than 18 years old
+        print('Sorry you cannot vote because you are not old enough')
+    if citizen != 'y': # not a citizen
+        print('Sorry you cannot vote because you are not a citizen')
+    if registered != 'y': #not registered to vote
+        print('Sorry you cannot vote because you are not registered to vote')
+
+'''
+>>>
+
+run #1
+please enter your age:19
+are you a citizen? (y/n):y
+are you registered to vote? (y/n):y
+congratulations, you can vote!
+
+run #2
+please enter your age:17
+are you a citizen? (y/n):y
+are you registered to vote? (y/n):y
+Sorry you cannot vote because you are not old enough
+
+run #3
+please enter your age:15
+are you a citizen? (y/n):n
+are you registered to vote? (y/n):y
+Sorry you cannot vote because you are not old enough
+Sorry you cannot vote because you are not a citizen
+
+run #4
+please enter your age:18
+are you a citizen? (y/n):n
+are you registered to vote? (y/n):n
+Sorry you cannot vote because you are not a citizen
+Sorry you cannot vote because you are not registered to vote
+
+>>>
+'''
