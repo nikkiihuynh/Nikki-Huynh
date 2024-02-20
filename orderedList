@@ -1,0 +1,48 @@
+# Nikki Huynh
+# 7/23/22
+# Description: A program with a function that returns the sorted list in ascending order if the parameter 'reverse' is false and a function that returns the sorted list in descending order if the parameter 'reverse' is true.
+
+X = int(input("How many numbers would you like to enter? "))
+aList = []
+for X in range (0, X, 1):
+    num = int(input("Please enter a number %i : " %(X + 1)))
+    aList.append(num)
+print('numbers = ', aList)
+
+reverse = input("Would you like to reverse the sorted order? True / False ")
+
+def sort(aList, reverse):
+    #ascending order
+    if reverse == False:
+        for j in range (0, len(aList), 1):
+            for i in range (0, len(aList) - 1, 1):
+                if aList[i] > aList[i+1]:
+                    temp = aList[i]
+                    aList[i] = aList[i+1]
+                    aList[i+1] = temp
+        return aList
+    elif reverse == True:
+        for j in range (0, len(aList), 1):
+            for i in range (0, len(aList) - 1, 1):
+                if aList[i] < aList[i+1]:
+                    temp = aList[i]
+                    aList[i] = aList[i+1]
+                    aList[i+1] = temp
+        return aList
+
+print("The list in ascending order is", sort(aList, False))
+print("The list in descending order is", sort(aList, True))
+
+'''
+>>>
+How many numbers would you like to enter? 4
+Please enter a number 1 : 56
+Please enter a number 2 : 73
+Please enter a number 3 : 16
+Please enter a number 4 : 97
+numbers =  [56, 73, 16, 97]
+Would you like to reverse the sorted order? True / False True
+The list in ascending order is [16, 56, 73, 97]
+The list in descending order is [97, 73, 56, 16]
+>>>
+'''
