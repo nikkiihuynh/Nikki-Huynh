@@ -1,0 +1,96 @@
+# Nikki Huynh
+# 7/24/22
+# Description: Program that lets the user enter 4 sides and 4 angles into lists. Program checks if the type of quadrilateral is either a: rhombus, square, or rectangle.
+
+while True:
+    print("=== Please enter Sides ===")
+    sides = []
+
+    for i in range(1, 5, 1):
+        side = float(input("Enter value for side %i: " %i))
+        if side < 0:
+            side = float(input("Value must be positive! Please enter side %i: " %i))
+        sides.append(side)
+
+    print("\n=== Please enter Angles ===")
+    angles = []
+
+    for i in range(1, 5, 1):
+        angle = float(input("Enter value for angle %i: " %i))
+        if angle < 0:
+            angle = float(input("Value must be positive! Please enter angle %i: " %i))
+        angles.append(angle)
+
+    print("\n=======================")
+
+    if sides[0] == sides[1] == sides[2] == sides[3] and angles[0] == angles[2] and angles[1] == angles[3] and angles[0] != angles[1]:
+        print("This is a RHOMBUS!")
+        
+    elif sides[0] == sides[1] == sides[2] == sides[3] and angles[0] == angles[1] == angles[2] == angles[3] == 90:
+        print("This is a SQUARE!")
+        
+    elif sides[0] == sides[2] and sides[1] == sides[3] and sides[0] != sides[1] and angles[0] == angles[1] == angles[2] == angles[3] == 90:
+        print("This is a RECTANGLE!")
+        
+    repeat = input("\nDo you want to repeat the program? (1-Yes, 2-No): ")
+    if repeat != '1' and repeat == '2':
+        break
+
+
+'''
+>>>
+=== Please enter Sides ===
+Enter value for side 1: -1
+Value must be positive! Please enter side 1: 1
+Enter value for side 2: 1
+Enter value for side 3: -1
+Value must be positive! Please enter side 3: 1
+Enter value for side 4: 1
+
+=== Please enter Angles ===
+Enter value for angle 1: -1
+Value must be positive! Please enter angle 1: 90
+Enter value for angle 2: 90
+Enter value for angle 3: -1
+Value must be positive! Please enter angle 3: 90
+Enter value for angle 4: 90
+
+=======================
+This is a SQUARE!
+
+Do you want to repeat the program? (1-Yes, 2-No): 1
+=== Please enter Sides ===
+Enter value for side 1: 1
+Enter value for side 2: 1
+Enter value for side 3: 1
+Enter value for side 4: 1
+
+=== Please enter Angles ===
+Enter value for angle 1: 120
+Enter value for angle 2: 60
+Enter value for angle 3: 120
+Enter value for angle 4: 60
+
+=======================
+This is a RHOMBUS!
+
+Do you want to repeat the program? (1-Yes, 2-No): 1
+=== Please enter Sides ===
+Enter value for side 1: 10
+Enter value for side 2: 20
+Enter value for side 3: 10
+Enter value for side 4: 20
+
+=== Please enter Angles ===
+Enter value for angle 1: 90
+Enter value for angle 2: 90
+Enter value for angle 3: 90
+Enter value for angle 4: 90
+
+=======================
+This is a RECTANGLE!
+
+Do you want to repeat the program? (1-Yes, 2-No): 2
+>>>
+'''
+    
