@@ -1,0 +1,58 @@
+# Nikki Huynh
+# 7/24/22
+# Description: Two function definitions:
+# (1) "speed": computes and prints the speed; parameters: distance, time
+# (2) "middle": returns the middle / median value of the 3 arguments; parameters: num1, num2, num3
+
+distance = int(input("Please input the distance traveled: "))
+time = int(input("Please input the time elapsed: "))
+
+def speed(distance, time):
+    speed = distance / time
+    return speed
+print("The speed calculated is %.2f" %speed(distance, time))
+
+num1 = int(input("Please input the desired value for num1: "))
+num2 = int(input("Please input the desired value for num2: "))
+num3 = int(input("Please input the desired value for num3: "))
+aList = [num1, num2, num3]
+
+def middle(num1, num2, num3):
+    # sort the list
+    def sort(aList):
+        for j in range(0, len(aList), 1):
+            for i in range(0, len(aList) - 1, 1):
+                if aList[i] > aList[i+1]:
+                    temp = aList[i]
+                    aList[i] = aList[i+1]
+                    aList[i+1] = temp
+        return aList
+    middle = sort(aList)[1]
+    return middle
+
+def main():
+    print("The middle / median of the list is", middle(num1, num2, num3))
+main()
+    
+'''
+>>>
+run #1:
+Please input the distance traveled: 730
+Please input the time elapsed: 12
+The speed calculated is 60.83
+Please input the desired value for num1: 4
+Please input the desired value for num2: 9
+Please input the desired value for num3: 2
+The middle / median of the list is 4
+
+run #2:
+Please input the distance traveled: 645
+Please input the time elapsed: 9
+The speed calculated is 71.67
+Please input the desired value for num1: 56
+Please input the desired value for num2: 78
+Please input the desired value for num3: 32
+The middle / median of the list is 56
+>>>
+'''
+
