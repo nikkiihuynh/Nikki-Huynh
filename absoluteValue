@@ -1,0 +1,27 @@
+# Nikki Huynh
+# 7/16/22
+# Description: Function that calculates the absolute value and returns the absolute value of a number.
+
+a = float(input('Enter a positive or negative value: '))
+def absolute(a):
+    absolute = a
+    if a >= 0:
+        return a
+    else:
+        return a*(-1)
+    
+abs = absolute(a)
+print('The absolute value of ', a, 'is:', abs)
+
+'''
+>>>
+run #1: 
+Enter a positive or negative value: -2
+The absolute value of  -2.0 is: 2.0
+
+run #2:
+Enter a positive or negative value: 23
+The absolute value of  23.0 is: 23.0
+
+>>>
+'''
