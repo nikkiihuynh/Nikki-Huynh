@@ -1,0 +1,28 @@
+# Nikki Huynh
+# 7/14/22
+# Description: Program that asks the user to input a sentence. Then asks the user to input 2 letters that are to be counted. 
+
+sentence = input("Please enter a sentence: ")
+letter1 = input("Please choose letter 1 to be counted: ")
+letter2 = input("Please choose letter 2 to be counted: ")
+                
+
+count1 = 0
+count2 = 0
+for i in range(0, len(sentence),1):
+    if sentence[i] == letter1:
+        count1 += 1
+    elif sentence[i] == letter2:
+        count2 += 1
+print("The letter",letter1, "was found", count1, "time(s).")
+print("The letter",letter2, "was found", count2, "time(s).")
+
+'''
+>>>
+Please enter a sentence: It is currently summer!
+Please choose letter 1 to be counted: r
+Please choose letter 2 to be counted: t
+The letter r was found 3 time(s).
+The letter t was found 2 time(s)
+>>>
+'''
