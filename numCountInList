@@ -1,0 +1,27 @@
+# Nikki Huynh
+# 7/14/22
+# Description: Program that generates a random list of numbers and finds how many times user-inputted number appears. 
+
+import random
+X = random.randint(15, 20)
+aList = [] # make an empty list
+for i in range(0,X,1):
+    randomNum = random.randint(2,5)
+    aList.append(randomNum) # add random numbers to the list
+# count how many times 3 is in the list
+count3 = 0
+for i in range(0,X,1):
+    if aList[i] == 3: # if you find a 3
+        count3 += 1 # add 1 to count3
+print(X)
+print (aList)
+print(3, "was found", count3, "times")
+
+'''
+>>>
+18
+[4, 2, 4, 5, 2, 4, 4, 3, 5, 4, 3, 2, 5, 3, 2, 3, 2, 2]
+3 was found 4 times
+
+>>>
+'''
