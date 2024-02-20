@@ -1,0 +1,43 @@
+# Nikki Huynh
+# 7/14/22
+# Description: Program that generates X random integers Num.
+
+from random import randint
+
+X = randint(10,15)
+
+sum = 0
+for i in range(0, X, 1):
+
+    number = randint(20, 50)
+    sum += number #adds every number to the sum
+    print(number, end=',')
+
+    #first random number is when i == 0
+    if i == 0: #if it is the first number
+        smallest = number
+    else: #if it is any number after the first
+        if number < smallest: #if any number is smaller
+            smallest = number #that is your new smallest
+
+    #first random number is when i == 0
+    if i == 0: #if it is the first number
+        largest = number
+    else: #if it is any number after the first
+        if number > largest: #if any number is smaller
+            largest = number #that is your new smallest
+
+print('\nsmallest =', smallest)
+print('largest =', largest)
+print('sum = ', sum)
+print('average = ', sum/X)
+
+'''
+>>>
+34,32,49,38,42,38,50,29,39,24,34,43,
+smallest = 24
+largest = 50
+sum =  452
+average =  37.666666666666664
+>>>
+'''
