@@ -1,0 +1,80 @@
+# Nikki Huynh
+# 7/22/22
+# Description: Program with 5 functions as list parameters: sum, average, min, max, main().
+
+X = int(input("How many numbers would you like to enter? "))
+aList = []
+for X in range (0, X, 1):
+    num = int(input("Please enter a number %i : " %(X + 1)))
+    aList.append(num)
+print('numbers = ', aList)
+
+# function name: sum
+# function parameter: a list of numbers 'aList'
+# function return: the sum of all the numbers in 'aList'
+# function description: calculates sum of numbers in 'aList'
+def sum(aList):
+    total = 0
+    for i in range(0, len(aList), 1):
+        total += aList[i]
+    return total
+
+# function name: average
+# function parameter: a list of numbers 'aList'
+# function return: the average of all the numbers in 'aList'
+# function description: calculates average of numbers in 'aList'
+def average(aList):
+    average = sum(aList) / len(aList)
+    return average
+
+# function name: min
+# function parameter: a list of numbers 'aList'
+# function return: the min of the numbers in 'aList'
+# function description: finds the minimum value in 'aList'
+def min(aList):
+    min = aList[0]
+    for i in range(0, len(aList), 1):
+        if aList[i] < min:
+            min = aList[i]
+    return min
+   
+# function name: max
+# function parameter: a list of numbers 'aList'
+# function return: the max of the numbers in 'aList'
+# function description: finds the maximum value in 'aList'
+def max(aList):
+    max = aList[0]
+    for i in range(0, len(aList), 1):
+        if aList[i] > max:
+            max = aList[i]
+    return max
+
+# function name: main
+# function parameter: none
+# function return: none
+# function description: calls all the other functions, starts the program
+def main():
+    print("The sum of the list is", sum(aList))
+    
+    print("The average of the list is", average(aList))
+    
+    print("The minimum value of the list is", min(aList))
+    
+    print("The maximum value of the list is", max(aList))
+    
+main()
+
+'''
+>>>
+How many numbers would you like to enter? 4
+Please enter a number 1 : 5
+Please enter a number 2 : 7
+Please enter a number 3 : 9
+Please enter a number 4 : 3
+numbers =  [5, 7, 9, 3]
+The sum of the list is 24
+The average of the list is 6.0
+The minimum value of the list is 3
+The maximum value of the list is 9
+>>>
+'''
