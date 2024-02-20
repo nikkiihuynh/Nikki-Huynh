@@ -1,0 +1,53 @@
+# Nikki Huynh
+# 7/22/22
+# Description: Program asks the user to enter X numbers into a list. Then it calculates and shows the sum, average, min, and max of those numbers.
+
+X = int(input("How many numbers would you like to enter? "))
+aList = []
+for X in range (0, X, 1):
+    num = int(input("Please enter a number %i : " %(X + 1)))
+    aList.append(num)
+print('numbers = ', aList)
+
+smallest = aList[0] #make smallest equal to the first value of the list
+for i in range(1, len(aList), 1):
+    #compare smallest to every other number on the list
+    if aList[i] < smallest: #if any number is smaller...
+        smallest = aList[i] #smallest is equal to that number
+print('The smallest number is', smallest)
+
+largest = aList[0] #make largest equal to the first value of the list
+for i in range(1, len(aList), 1):
+    #compare largest to every other number on the list
+    if aList[i] > largest: #if any number is larger...
+        largest = aList[i] #largest is equal to that number
+print('The largest number is', largest)
+
+#find the sum of all numbers in the list
+sum = 0
+#loop that goes through all the numbers
+for index in range(0, len(aList), 1):
+    sum = sum + aList[index]
+print("The sum is", sum)
+
+#find the average of all numbers in the list
+avg = sum / len(aList)
+print("The average is", avg)
+
+'''
+>>>
+
+How many numbers would you like to enter? 5
+Please enter a number 1 : 2
+Please enter a number 2 : 4
+Please enter a number 3 : 8
+Please enter a number 4 : 9
+Please enter a number 5 : 4
+numbers =  [2, 4, 8, 9, 4]
+The smallest number is 2
+The largest number is 9
+The sum is 27
+The average is 5.4
+
+>>>
+'''
